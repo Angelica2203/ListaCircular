@@ -100,7 +100,7 @@ public class Circular
     {
         if (ultimo == null) 
         {
-            System.out.println("Lista vacía.");
+            System.out.println("La lista esta vacia");
         } 
         else if (ultimo == ultimo.siguiente) 
         {
@@ -108,13 +108,13 @@ public class Circular
         } 
         else 
         {
-            Nodo temp = ultimo.siguiente;
-            while (temp.siguiente != ultimo) 
+            Nodo aux = ultimo.siguiente;
+            while (aux.siguiente != ultimo) 
             {
-                temp = temp.siguiente; 
+                aux = aux.siguiente; 
             }
-            temp.siguiente = ultimo.siguiente; 
-            ultimo = temp; 
+            aux.siguiente = ultimo.siguiente; 
+            ultimo = aux; 
         }
     }
 }
