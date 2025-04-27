@@ -122,22 +122,16 @@ public class Circular
     }
     public void Recorrido() 
     {
-        if (ultimo == null) 
-        {
-            System.out.println("La lista esta vacia");
-            return;
-        }
         Nodo temp = ultimo.siguiente;
-        int contador = 0; // Contador para controlar las repeticiones
-        while (contador < 3) // Repetir 3 veces
+        int cont = 0; 
+        while (cont < 3) 
         {
             System.out.print(temp.dato + " -> ");
             temp = temp.siguiente;
             if (temp == ultimo.siguiente) 
             {
-                contador++; // Incrementar el contador al completar un ciclo
+                cont++; 
             }
         }
-        System.out.println("\n");
     }
 }
