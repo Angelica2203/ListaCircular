@@ -36,6 +36,9 @@ public class Circular
         lista.EliminarUltimo();
         System.out.println("Eliminado el ultimo numero:");
         lista.MostrarLista();
+
+        System.out.println("Recorrido de la lista:");
+        lista.Recorrido();
     }
     public void AgregarAlFinal(int dato) 
     {
@@ -116,5 +119,25 @@ public class Circular
             aux.siguiente = ultimo.siguiente; 
             ultimo = aux; 
         }
+    }
+    public void Recorrido() 
+    {
+        if (ultimo == null) 
+        {
+            System.out.println("La lista esta vacia");
+            return;
+        }
+        Nodo temp = ultimo.siguiente;
+        int contador = 0; // Contador para controlar las repeticiones
+        while (contador < 3) // Repetir 3 veces
+        {
+            System.out.print(temp.dato + " -> ");
+            temp = temp.siguiente;
+            if (temp == ultimo.siguiente) 
+            {
+                contador++; // Incrementar el contador al completar un ciclo
+            }
+        }
+        System.out.println("\n");
     }
 }
